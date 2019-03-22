@@ -14,3 +14,4 @@ namespace MVCLearning.Models
         public string Text { get; }
         public DateTime Day { get; }
     }
+}

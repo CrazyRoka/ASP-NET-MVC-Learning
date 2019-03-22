@@ -11,6 +11,9 @@ namespace MVCLearning.Controllers
 {
     public class ViewsDemoController : Controller
     {
+        private EventsAndMenusContext _context;
+        public ViewsDemoController(EventsAndMenusContext context) => _context = context;
+
         public IActionResult Index() => View();
 
         public IActionResult PassingData()
@@ -50,5 +53,15 @@ namespace MVCLearning.Controllers
         public IActionResult LayoutSample => View();
 
         public IActionResult LayoutUsingSections() => View();
+
+        public IActionResult UseAPartialView1() => View(_context);
+
+        public ActionResult UseAPartialView2() => View();
+
+        public ActionResult ShowEvents()
+        {
+            ViewBag.EventsTitle = "Live Events";
+            return PartialView(_context.Events);
+        }
     }
 }
