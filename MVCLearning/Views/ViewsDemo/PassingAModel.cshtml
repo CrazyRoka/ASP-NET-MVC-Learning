@@ -1,0 +1,21 @@
+﻿@using MVCLearning.Models
+@model IEnumerable<Menu>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passing A Model</title>
+</head>
+<body>
+    <div>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@item.Text</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

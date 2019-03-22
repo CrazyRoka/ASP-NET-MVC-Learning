@@ -12,7 +12,7 @@ namespace MVCLearning.Controllers
 {
     public class POCOController
     {
-        public IActionResult Index() => "this is POCO controller";
+        public string Index() => "this is POCO controller";
 
         [ActionContext]
         public ActionContext ActionContext { get; set; }
