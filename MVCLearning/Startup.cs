@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using MVCLearning.Models;
+using MVCLearning.Services;
 
 namespace MVCLearning
 {
@@ -16,6 +17,7 @@ namespace MVCLearning
         {
             services.AddMvc();
             services.AddScoped<EventsAndMenusContext>();
+            services.AddScoped<ISampleService, SampleService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

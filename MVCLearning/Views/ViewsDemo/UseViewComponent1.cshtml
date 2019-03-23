@@ -1,0 +1,11 @@
+﻿@{ 
+    ViewBag.Title = "View Components Sample";
+}
+<h2>@ViewBag.Title</h2>
+<p>
+    @await  Component.InvokeAsync("EventList", new Dictionary<string, object>()
+    {
+        ["from"] = new DateTime(1999, 10, 8),
+        ["to"] = DateTime.Now
+    })
+</p>

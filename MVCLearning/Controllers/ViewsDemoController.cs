@@ -63,5 +63,9 @@ namespace MVCLearning.Controllers
             ViewBag.EventsTitle = "Live Events";
             return PartialView(_context.Events);
         }
+
+        public IActionResult UseViewComponent1() => View();
+
+        public IActionResult InjectServiceInView() => View();
     }
 }
